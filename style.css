@@ -1,10 +1,11 @@
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 20;
     padding: 0;
-    background: linear-gradient(to right, #1A1A2E, #0F3460); /* Dark blue & deep navy */
+    background: url('https://images.unsplash.com/photo-1607823477522-177cff8183d1?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; /* Ganti city-bg.jpg dengan gambar kota lu */
     color: white;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
 
 header {
@@ -12,17 +13,19 @@ header {
     color: white;
     text-align: center;
     padding: 20px;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 30px 30px;
+    
 }
+
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #16213E; /* Dark navy */
     margin: 0;
-    border-radius: 20px;
+    border-radius: 10px;
+    
 }
 
 nav ul li {
@@ -30,29 +33,40 @@ nav ul li {
 }
 
 nav ul li a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #E63946;
     color: white;
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+            
 }
 
-nav ul li a:hover {
-    background-color: #E63946; /* Spiderman red hover */
-    border-radius: 10px;
+.back-button:hover {
+    background: #c92a3b;
 }
+
 
 section {
-    padding: 20px;
+    padding: 30px;
     max-width: 800px;
     margin: auto;
-    background: #1B1B2F; /* Dark theme */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background: #010325; /* Dark theme */
+    box-shadow: 0 0 10px rgba(221, 3, 3, 0.5);
     margin-top: 20px;
     border-radius: 10px;
 }
 
 .about-container {
     display: flex;
+    background: #0F3460; /* Dark blue project cards */
+    padding: 15px;
+    margin: 15px 0;
+    border-left: 5px solid #E63946; /* Spiderman red highlight */
+    border-radius: 5px;
     align-items: center;
     justify-content: space-between;
 }
@@ -63,14 +77,13 @@ section {
 }
 
 .about-photo {
-    width: 150px;
+    width: 155px; /* Ukuran lebih kecil */
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #E63946; /* Spiderman red border */
+    border: 4px solid #E63946; /* Spiderman red border */
     position: relative;
     overflow: hidden;
-    box-shadow: 0 0 15px rgba(230, 57, 70, 0.8);
 }
 
 .about-photo::before {
@@ -91,15 +104,42 @@ section {
 .project {
     background: #0F3460; /* Dark blue project cards */
     padding: 10px;
-    margin: 10px 0;
+    margin: 20px 0;
     border-left: 5px solid #E63946; /* Spiderman red highlight */
     border-radius: 5px;
 }
 
 #contact p {
-    text-align: left;
-    margin-left: 20px;
+    display: flex;
+    border-left: 5px solid #E63946; /* Spiderman red highlight */
+    background: #0F3460; /* Dark blue project cards */
+    padding: 10px;
+    margin: 10px 0;
+    border-left: 5px solid #E63946; /* Spiderman red highlight */
+    border-radius: 5px;
+    align-items: left;
 }
+
+/* Mengubah warna link agar sesuai dengan warna teks */
+#contact a {
+    color: inherit; /* Menggunakan warna teks default */
+    text-decoration: none; /* Menghilangkan garis bawah */
+}
+
+#contact a:hover {
+    text-decoration: underline; /* Tambahkan efek garis bawah saat hover */
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Tambah jarak antara ikon dan teks */
+}
+
+.contact-info i {
+    font-size: 20px; /* Sesuaikan ukuran ikon */
+}
+
 
 /* Responsiveness */
 @media (max-width: 768px) {
@@ -120,4 +160,28 @@ section {
     .about-photo {
         margin-top: 20px;
     }
+
+ 
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #1A1A2E, #0F3460); /* Dark blue & deep navy */
+    color: white;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
+
+header {
+    background-color: #E63946; /* Spiderman red */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 30px 30px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+};

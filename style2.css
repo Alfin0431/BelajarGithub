@@ -1,0 +1,50 @@
+/* Background dengan gambar kota */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1607823477522-177cff8183d1?q=80&w=1468&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover; /* Ganti city-bg.jpg dengan gambar kota lu */
+}
+
+/* Window efek transparan */
+.thankyou-window {
+    background: rgba(255, 255, 255, 0.1); /* Transparan */
+    backdrop-filter: blur(3px); /* Efek blur */
+    text-align: center;
+    padding: 500px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+/* Teks dengan gaya keren */
+.thankyou-window h1 {
+    font-size: 2em;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.thankyou-window p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+/* Tombol navigasi */
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #E63946;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #c92a3b;
+}

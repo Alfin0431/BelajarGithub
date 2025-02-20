@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Alfin </title>
+    <title>Portofolio Alfin</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Feather Icons CDN -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        /* Styling untuk jarak antara ikon dan teks */
+        .contact-info i {
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>------Alfin Joy------</h1>
+        <h1>Portpolio</h1>
+        <h1>Alfin</h1>
         <p>A beginner in the world of programming who wants to conquer and master the Earth.</p>
     </header>
     <nav>
@@ -16,6 +26,7 @@
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Project</a></li>
             <li><a href="#contact">Contact</a></li>
+            <li><a href="thankyou.html" id="exit-button">Exit</a></li>
         </ul>
     </nav>
     <section id="about">
@@ -36,7 +47,7 @@
         </div>
         <div class="project">
             <h3>Project 2</h3>
-            <p> Another masterpiece crafted with love, sweat, and countless Ctrl+Zs. 😂
+            <p>Another masterpiece crafted with love, sweat, and countless Ctrl+Zs. 😂
                 At one point, I thought the code had a mind of its own! 🤖
                 But after wrestling with bugs like a true warrior, it's finally done. 💪🔥
                 Now, it runs smoother than my life decisions! (Or does it?) 😆</p>
@@ -44,13 +55,35 @@
     </section>
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email    : <a href="mailto:emailkamu@example.com">alfinnn831@gmail.com</a></p>
-        <p>LinkedIn : <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/Alfin</a></p>
-        <p>GitHub   : <a href="https://github.com/username" target="_blank">github.com/Alfin0431</a></p>
+        <p class="contact-info"><i data-feather="mail"></i> <a href="mailto:alfinnn831@gmail.com">alfinnn831@gmail.com</a></p>
+        <p class="contact-info"><i data-feather="instagram"></i> <a href="https://www.instagram.com/alfin_jyz?igsh=bmd6Y3o0aTVsYWMw&utm_source=qr" target="_blank">alfin_jyz</a></p>
+        <p class="contact-info"><i data-feather="video"></i> <a href="https://www.tiktok.com/@__alfinnn_?is_from_webapp=1&sender_device=pc" target="_blank">@__alfinnn_</a></p>
     </section>
     <footer>
         <p>&copy; 2025 AlfinProject. All rights reserved.</p>
     </footer>
-    <script src="script.js"></script>
+
+    <!-- Feather Icons Initialization -->
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.querySelectorAll('nav ul li a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+    
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50, // Biar ga ketutupan header
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    
 </body>
 </html>
